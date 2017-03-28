@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta http-equiv="x-ua-compatible" content="ie=edge">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+        <style>
+            html{
+                background: #000 url('http://www.latoro.com/wallpapers/black-and-white/19453-desktop-wallpapers-world-map.jpg') no-repeat center center;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+            body{
+                padding: 10vh 10vw;
+                background-color: transparent;
+                color: white;
+            }
+            #weather {
+                margin: auto;
+                width: 200px;
+                border: 1px solid white;
+                text-align: center;
+                background-color: rgba(0,0,0,0.5);
+                box-shadow: 10px 10px 2px rgba(0,0,0,0.5);
+            }
+            hr { border: 1px solid white; background-color: white; }
+            #big-temp { font-size: 5rem; }
+            #forecast { text-align: center;}
+            img { width: 100%; }
+            .sky {
+                height: 300px;
+                overflow: hidden;
+                background: linear-gradient(#000, #3399ff);
+                background-size: 100% 400%;
+                -webkit-animation: sky_background 50s ease-out infinite;
+                -moz-animation: sky_background 50s ease-out infinite;
+                -o-animation: sky_background 50s ease-out infinite;
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                -o-transform: translate3d(0, 0, 0);
+                border: 1px solid white;
+            }
+            .clouds {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background: url("./images/cloud_one.png");
+                background: url("./images/cloud_one.png") 100% 100%, url("./images/cloud_two.png") 50% 50%, url("./images/cloud_three.png") 100px 250px;
+                -webkit-animation: wind 120s linear infinite;
+                -moz-animation: wind 120s linear infinite;
+                -o-animation: wind 120s linear infinite;
+                animation: wind 120s linear infinite;
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                -o-transform: translate3d(0, 0, 0);
+                z-index: 10;
+            }
+            @-webkit-keyframes sky_background {
+                0% {
+                    background-position: 0% 100%;
+                }
+                50% {
+                    background-position: 0% 0%;
+                }
+                100% {
+                    background-position: 0% 100%;
+                }
+            }
+            @-webkit-keyframes wind {
+                0% {
+                    background-position: 100% 100%, 50% 50%, 100px 250px;
+                }
+                100% {
+                    background-position: 0% 100%, 100% 50%, 1100px 250px;
+                }
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+        <script src="weatherapp.js"></script>
+    </head>
+    <body>
+        <div id="main" class="container">
+            <div class="row">
+                <div id="title" class="col-xs-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8 sky">
+                    <div class="clouds" style="padding-top: 6%;">
+                        <!-- primary weather container -->
+                        <div id="weather">
+                            <div id="current" class="card">
+                                <div id="current-condition">
+                                    <img src='http://www.noragsracing.com/images/glass.png' class='card-img-top' alt=''>
+                                </div>
+                                <div class="card-block">
+                                    <p class="card-text">
+                                        <span id="big-temp"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end primary weather container -->
+                    </div>
+                </div>
+                <div class="col-xs-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <div id="forecast"></div>
+                </div>
+                <div class="col-xs-2"></div>
+            </div>
+            <div class="row">
+                <div id="dev" class="col-xs-12" style="text-align: center;"></div>
+            </div>
+        </div>
+    </body>
+</html>
