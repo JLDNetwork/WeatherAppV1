@@ -1,1 +1,6 @@
-/WeatherApp/nbproject/private/
+/WeatherApp/nbproject/
+/WeatherApp/test/
+/WeatherApp/.bowerrc
+/WeatherApp/Gruntfile.js
+/WeatherApp/bower.json
+/WeatherApp/gulpfile.js
