@@ -8,8 +8,17 @@
         "client",
         "browser"
     ],
-    "author": "jgllt",
+    "author": "JL Designs Network <staff@jldnet.org>",
     "contributors": [
+        "Jeffgl77"
     ],
-    "dependencies": {}
+    "dependencies": [
+        "weatherapp.js",
+        "images/",
+        "images/cloud_one.png",
+        "images/cloud_two.png",
+        "images/cloud_three.png",
+        "images/glass.png",
+        "images/19453-desktop-wallpapers-world-map.png"
+    ]
 }
