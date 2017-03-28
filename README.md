@@ -11,4 +11,4 @@
 *  [Download](https://github.com/Jeffgl77/WeatherAppV1/archive/master.zip "download") 
 *  git bash clone : [https://github.com/Jeffgl77/WeatherAppV1.git]
 
-<small>Can be used as a stand-alone app or in an iframe.</small>
+<small>Can be used as a stand-alone web page or in an iframe.</small>
